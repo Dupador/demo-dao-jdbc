@@ -100,7 +100,7 @@ public class SellerDaoJDBC implements SellerDao {
 	@Override
 	public Seller findById(Integer id) {
 		PreparedStatement st = null;
-		ResultSet  rs = null;
+		ResultSet rs = null;
 		
 		try {
 			st = conn.prepareStatement("SELECT seller.*,department.Name as DepName "
@@ -145,7 +145,7 @@ public class SellerDaoJDBC implements SellerDao {
 	@Override
 	public List<Seller> findAll() {
 		PreparedStatement st = null;
-		ResultSet  rs = null;	
+		ResultSet rs = null;	
 		try {
 			st = conn.prepareStatement("SELECT seller.*,department.Name as DepName "
 					+ "FROM seller INNER JOIN department "
@@ -178,7 +178,7 @@ public class SellerDaoJDBC implements SellerDao {
 	@Override
 	public List<Seller> findByDepartment(Department department) {
 		PreparedStatement st = null;
-		ResultSet  rs = null;
+		ResultSet rs = null;
 		
 		try {
 			st = conn.prepareStatement("SELECT seller.*,department.Name as DepName "
